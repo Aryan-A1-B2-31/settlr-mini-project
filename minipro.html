@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Settlr</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .navbar-brand {
+                font-weight: 800;
+                letter-spacing: -0.5px;
+                color: blue;
+            }
+            .box {
+                background: darkblue;
+                color: #ffffff;
+                ;
+                border-radius: 5rem;
+            }
+            .chat-box {
+                height: 150px;
+                overflow-y: auto;
+                background-color: oldlace;
+                border: 1px solid #e2e8f0;
+                border-radius: 0.75rem;
+                padding: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-primary-subtle border-bottom sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-1" href="#">
+                    🫂
+                    <u>
+                        Settlr
+                    </u>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">          
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#newcomer">
+                                Newcomers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#localites">
+                                Localites
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#community">
+                                Community
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2">
+                        <select id="citySelect" class="form-select form-select-sm fw-semibold" style="width: auto;">
+                            <option>
+                                Nagpur Hub
+                            </option>
+                            <option>
+                                Pune Hub
+                            </option>
+                            <option>
+                                Mumbai Hub
+                            </option>
+                            <option>
+                                Hyderabad Hub
+                            </option>
+                            <option>
+                                Bangalore Hub
+                            </option>
+                        </select>
+                        <button class="btn btn-primary btn-sm position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#matchesDrawer">
+                            Matches
+                        </button>
+                        <div class="container">
+                            <button class="btn btn-outline-secondary btn-sm" id="btn-switch" type="button">
+                                ☀️ Light Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main class="container-liquid border-bottom bg-success-subtle">
+            <section class="box p-4 p-md-5 mb-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <span class="badge bg-light text-dark mb-2">
+                            Relocation Platform
+                        </span>
+                        <h1 class="display-5 fw-bold mb-3">
+                            Moved to Nagpur? Find your people in 18 hours.
+                        </h1>
+                        <p class="lead text-white-50 mb-4">
+                            Settlr combines swipe-based friend matching with live city community channels so students and young professionals never feel stranded in a new city.
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="bg-white text-dark p-4 rounded-4 shadow-sm">
+                            <div class="small text-uppercase text-muted fw-bold mb-2">
+                                Active Hub Snapshot
+                            </div>
+                            <h4 class="fw-bold mb-3" id="statsCityTitle">
+                                Nagpur
+                            </h4>
+                            <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                                <span class="text-muted">
+                                    New Arrivals This Week
+                                </span>
+                                <span class="fw-bold text-primary" id="statArrivals">
+                                    84
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                                <span class="text-muted">
+                                    Active Channels
+                                </span>
+                                <span class="fw-bold">
+                                    6 Live Rooms
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">
+                                    Weekend Meetup
+                                </span>
+                                <span class="fw-bold text-success" id="statMeetup">
+                                    Futala Lake Chai & Jam
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="newcomer" class="mb-5">
+                <div class="flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                    <div>
+                        <h2 class="h4 fw-bold mb-0">
+                            Discover Newcomers in Nagpur:
+                        </h2>
+                        <p class="text-muted small mb-0">
+                            Connect with verified students and interns who recently relocated.
+                        </p>
+                    </div>                
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-top border-4" style="border-top-color: #4f46e5 !important;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">
+                                    Aryan Shrivastava
+                                </h5>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    Age: 18 • From Jabalpur
+                                </h6>
+                                <p class="card-text small text-secondary mb-2">
+                                    📍 Engineering Student, Ambazari
+                                </p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary bg-opacity-25 text-body me-1">
+                                        Coding
+                                    </span>
+                                    <span class="badge bg-secondary bg-opacity-25 text-body me-1">
+                                        Cubing
+                                    </span>
+                                    <span class="badge bg-secondary bg-opacity-25 text-body">
+                                        Sketching
+                                    </span>
+                                    <p class="mb-0">
+                                        <strong>
+                                            🏠Housing:
+                                        </strong> 
+                                        "Looking for a roommate near Dharampeth / Shankar Nagar."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-top border-4" style="border-top-color: #7c3aed !important;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">
+                                    Shivam Khapare
+                                </h5>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    Age: 19 • From Gadchiroli
+                                </h6>
+                                <p class="card-text small text-secondary mb-2">
+                                    📍 B.Tech Student
+                                </p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary bg-opacity-25 text-body me-1">
+                                        Coding
+                                    </span>
+                                    <span class="badge bg-secondary bg-opacity-25 text-body me-1">
+                                        Table Tennis
+                                    </span>
+                                    <span class="badge bg-secondary bg-opacity-25 text-body">
+                                        Books
+                                    </span>
+                                    <p class="mb-0">
+                                        <strong>
+                                            🏠Housing
+                                        </strong> 
+                                        "Looking for a roommate near Dharampeth / Shankar Nagar."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="localites" class="mb-5">
+                <div class="flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                    <div>
+                        <h2 class="h4 fw-bold mb-0">
+                            Discover Localites in Nagpur:
+                        </h2>
+                        <p class="text-muted small mb-0">
+                            Connect with verified localites.
+                        </p>
+                    </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-top border-4" style="border-top-color: #4f46e5 !important;">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">
+                                    Vedant Gaikwad
+                                </h5>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    Age: 18
+                                </h6>
+                                <p class="card-text small text-secondary mb-2">
+                                    📍 Engineering Student, Nagpur
+                                </p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary bg-opacity-25 text-body me-1">
+                                        Coding
+                                    </span>
+                                    <span class="badge bg-secondary bg-opacity-25 text-body me-1">
+                                        Cubing
+                                    </span>
+                                    <span class="badge bg-secondary bg-opacity-25 text-body">
+                                        Sketching
+                                    </span>
+                                    <p class="mb-0">
+                                        <strong>
+                                            🏠Housing:
+                                        </strong>
+                                        "Living in Sitabuldi."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="community" class="mb-5">
+                <div class="mb-3">
+                    <h2 class="h4 fw-bold mb-0">
+                        Nagpur Community Channels
+                    </h2>
+                    <p class="text-muted small mb-0">
+                        Drop into topic-based local rooms for flatmates, food spots, and weekend plans.
+                    </p>
+                </div>
+                <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="p-3 rounded-4 border h-100">
+                        <div class="small text-uppercase text-muted fw-bold mb-2">
+                            Text Channels
+                        </div>
+                        <div class="d-grid gap-2" id="channelList">
+                            <button class="btn btn-outline-primary text-start active" type="button">
+                                General chat
+                            </button>
+                            <button class="btn btn-outline-secondary text-start" type="button">
+                                Flatmates and pg
+                            </button>
+                            <button class="btn btn-outline-secondary text-start" type="button">
+                                Weekend meetups
+                            </button>
+                            <button class="btn btn-outline-secondary text-start" type="button">
+                                Local food spots
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="p-3 rounded-4 border">
+                        <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+                            <span class="fw-bold text-primary" id="activeChannelHeader">
+                                General chat
+                            </span>
+                            <span class="badge bg-success-subtle text-success">
+                                Online Now
+                            </span>
+                        </div>
+                        <div id="chatMessages" class="chat-box mb-3">
+                            <div class="mb-2">
+                            <strong>
+                                Aryan:
+                            </strong> 
+                            <span class="text-secondary">
+                                Welcome to the Nagpur hub! Anyone up for evening chai near Ramdeobaba University?
+                            </span>
+                            </div>
+                        </div>
+                        <form class="input-group">
+                            <input type="text" class="form-control" placeholder="Message this channel..." required>
+                            <button class="btn btn-primary px-4" type="submit">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="mb-5">
+                <div class="mb-3">
+                    <h2 class="h4 fw-bold mb-0">
+                        Contact & Support:
+                    </h2>
+                    <ul class="mt-1">
+                        <li>
+                            Email: settlrofficial@gmail.com
+                        </li>
+                        <li>
+                            Website: www.settlrofficial.com
+                        </li>
+                        <li>
+                            Phone: +91 XXXXX XX919
+                        </li>
+                        <li>
+                            Follow Us On Instagram @settlrofficial.in
+                        </li>
+                        <li>
+                            Location: Sitabuldi, Nagpur, Maharashtra.
+                        </li>
+                    </ul>
+                </div>    
+            </section>
+        </main>
+        <footer class="bg-primary-subtle border-top py-3 text-center text-muted small">
+            <span class="brand-font fs-4 fw-bold text-dark">
+                Settlr
+            </span>
+        </div>
+        </footer>
+    </body>
+</html>
